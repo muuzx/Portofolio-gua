@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muuzx — Expressions in Digital & Handmade</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f5f1;
+      color: #2e2e2e;
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      padding: 100px 20px 60px;
+      background: linear-gradient(to right, #ede7f6, #f1f8e9, #fff8e1);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #6a1b9a;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #5d4037;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background-color: #7c4dff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #5e35b1;
+      transform: translateY(-2px);
+    }
+
+    .gallery-tabs {
+      margin-bottom: 20px;
+    }
+
+    .tab-btn {
+      margin: 0 10px;
+      padding: 8px 16px;
+      background-color: #c5e1a5;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      background-color: #81c784;
+    }
+
+    .gallery-content {
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      gap: 10px;
+      scroll-snap-type: x mandatory;
+      padding: 10px;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+
+    .gallery-content img {
+      max-height: 200px;
+      border-radius: 10px;
+      scroll-snap-align: center;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-content img:hover {
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .bg-soft {
+      background: linear-gradient(to right, #ede7f6, #f1f8e9, #fff8e1);
+    }
+
+    .about {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .about img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #d1c4e9;
+    }
+
+    .about p {
+      font-size: 1rem;
+      color: #4e342e;
+      line-height: 1.6;
+    }
+
+    .contact {
+      margin-top: 20px;
+    }
+
+    .contact a {
+      display: block;
+      margin: 5px 0;
+      color: #6a1b9a;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO / Perkenalan -->
+  <section class="hero">
+    <h1>Halo Cuyy, Gw muuzx</h1>
+    <p>Selamat datang di ruang ekspresi gw. Di sini kamu akan menemukan karya-karya digital dan handmade yang penuh warna, cerita, dan emosi.<br/> disini protofolio saya hanya akan menceritakan tentang kehidupan gw juga.</p>
+    <button class="btn" onclick="showGallery()">Lihat Karya</button>
+  </section>
+
+  <!-- Galeri Section -->
+  <div id="galeri-section" class="section bg-soft hidden">
+    <h2>Galeri Karya</h2>
+    <div class="gallery-tabs">
+      <button class="tab-btn active" data-tab="galeri1">Digital</button>
+      <button class="tab-btn" data-tab="galeri2">Handmade</button>
+    </div>
+
+    <div id="galeri1" class="gallery-content">
+      <a href="karya-digital1.html">
+        <img src="https://via.placeholder.com/300x200?text=Digital+1" alt="Digital 1">
+      </a>
+      <a href="karya-digital2.html">
+        <img src="https://via.placeholder.com/300x200?text=Digital+2" alt="Digital 2">
+      </a>
+    </div>
+
+    <div id="galeri2" class="gallery-content hidden">
+      <a href="karya-handmade1.html">
+        <img src="https://via.placeholder.com/300x200?text=Handmade+1" alt="Handmade 1">
+      </a>
+      <a href="karya-handmade2.html">
+        <img src="https://via.placeholder.com/300x200?text=Handmade+2" alt="Handmade 2">
+      </a>
+    </div>
+
+    <!-- About Me -->
+    <div class="about">
+      <img src="https://via.placeholder.com/120x120.png?text=Muuzx" alt="Foto Muuzx" />
+      <p>
+        Gw adalah Muuzx, seorang kreator visual yang mengekspresikan diri melalui karya digital dan handmade.<br\> Setiap karya saya adalah hasil dari perjalanan emosi, eksperimen warna, dan intuisi estetika.<br/>
+        Gw memulai perjalanan ini tanpa tahu ke mana akan berujung.<br/> Namaku Muuzx, dan segala hal tentang seni menggambar muncul begitu Gw di usia 13, seperti sesuatu yang akhirnya menemukan tempatnya dalam diriku. Awalnya hanya iseng corat-coret saat sekolah, tapi lama-lama aku sadar: ini bukan cuma soal “mengisi waktu kosong".<br/> Ini cara aku memahami dunia—dan mengekspresikan yang bahkan tak bisa dijelaskan dengan kata.<br/>
+Di umur 14, rasa ingin tahu itu berubah jadi niat. Aku mulai menggambar dengan lebih serius—mencoba memahami teknik, bentuk, pencahayaan, dan warna. Bukan cuma “ingin bisa”, tapi benar-benar pengin berkembang.<br/> Malam-malam yang aku habiskan bukan untuk scroll media sosial, tapi untuk memperbaiki satu detail mata, atau mencoba ulang tekstur kulit berkali-kali. Dan di situ, aku tahu: ini bukan hobi biasa.<br/>
+Lompatan terbesarku datang di usia 16. Aku banyak berlatih, belajar dari seniman lain, dan mengeksplorasi berbagai gaya baik digital maupun manual.<br/> Aku jatuh cinta pada kebebasan visual yang ditawarkan kedua dunia itu. Tangan dan stylusku mulai lebih percaya diri, dan aku merasa seperti akhirnya menemukan “bahasaku” sendiri lewat gambar.<br/>
+Sekarang aku 17. Di usia di mana banyak orang mulai memutuskan jalan hidupnya, jujur saja: aku masih ragu. Kadang aku bertanya, apakah ini bisa jadi jalan yang layak untuk masa depan? Apakah dunia seni bisa memberi ruang yang cukup untuk aku tumbuh, tidak hanya sebagai seniman, tapi sebagai manusia juga?
+<br/>Tapi di tengah kebimbangan itu, satu hal yang selalu jadi pengingat: setiap kali aku menggambar, meski cuma satu garis, aku merasa “kembali pulang.” Dan mungkin, dari sanalah aku akan memulai lagi—pelan-pelan, sambil tetap mencari arti, arah, dan keberanian untuk terus berjalan.
+
+      </p>
+      <div class="contact">
+        <a href="https://wa.me/6288225374213" target="_blank">📱 +62 882-2537-4213</a>
+        <a href="https://instagram.com/muuzx__" target="_blank">📸 Instagram: @muuzx__</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function showGallery() {
+      const galeri = document.getElementById('galeri-section');
+      galeri.classList.remove('hidden');
+      galeri.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const tab = btn.dataset.tab;
+          document.querySelectorAll('.gallery-content').forEach(gc => {
+            gc.classList.add('hidden');
+          });
+          document.getElementById(tab).classList.remove('hidden');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
